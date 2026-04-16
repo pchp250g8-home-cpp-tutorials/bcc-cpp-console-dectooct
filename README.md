@@ -1,5 +1,5 @@
 DecToOct. C++ Tutorials. Embarcadero Rad Studio IDE. Simple Input/Output. Algorithms. Strings. Windows Platform. Console Application. 
-A console application in the C++ programming language. 
+A console application in the C++ programming language.
 The program does the following:
   1. Prompts the user to enter an integer.
   2. Checks whether the number is positive. It should also be no more than 4,294,967,295.
