@@ -4,13 +4,13 @@
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-    long  uDecNum,uTempVal;
+    long long  uDecNum,uTempVal;
     std::string strOctNum;
     std::cout << "Input an unsigned integer number\r\n";
     std::cin >> uDecNum;
     if (uDecNum < 0 or uDecNum > UINT32_MAX)
     {
-        std::cout << "Inorrect number format\r\n";
+        std::cout << "Incorrect number format\r\n";
         std::cin.ignore();
         std::cin.get();
         return 0;
@@ -18,8 +18,9 @@ int _tmain(int argc, _TCHAR* argv[])
     uTempVal = uDecNum;
     while (uTempVal > 0)
     {
-        char chDighit = static_cast<char>((uTempVal % 8) + '0');
-        strOctNum = chDighit + strOctNum;
+        long long nOctDigit = uTempVal % 8;
+        char chOctDighit = static_cast<char>(nOctDigit + '0');
+        strOctNum = chOctDighit + strOctNum;
         uTempVal /= 8;
     }
     if (strOctNum.empty()) strOctNum = "0";
